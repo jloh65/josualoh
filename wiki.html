@@ -19,24 +19,34 @@
 <body>
 	<div class="container">
 		<div class="jumbotron">
-			<h2>Wikipedia-Webformular</h2>
-			<label><form action="http://de.wikipedia.org/wiki/Spezial:Suche">
+			<form action="http://de.wikipedia.org/wiki/Spezial:Suche">
 				<fieldset>
-					<legend>Suchen</legend>
-					<input type="text" name="search" value="" /> <input type="submit"
-						name="go" value="Artikel" /> <input type="submit" name="fulltext"
-						value="Volltext" />
+					<legend>Wikipedia Suche</legend>
+					<div class="form-group">
+						<p>
+							<label class="control-label" for="search" tabindex="1">Here we go...</label>
+						</p>
+						<input class="form-control" type="text" name="search" id="search"
+							tabindex="2" />
+					</div>
+					<div class="form-group">
+						<p>
+							<input class="btn" type="submit" name="go" id="go"
+								value="Artikel" tabindex="3" /> <input class="btn" type="submit"
+								name="fulltext" id="fulltext" value="Volltext" tabindex="4" />
+						</p>
+					</div>
 				</fieldset>
-			</label></form>
-		</div>
-	</div>
-	<a
-		href="http://wave.webaim.org/report#/josualoh90.cloudcontrolled.com%2Fwiki.html"><img
-		src="wcag1AAA.gif" alt="WAVE-Tool" /></a>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/bootstrap.min.js"></script>
+			</form>
+			<a
+				href="http://wave.webaim.org/report#/josualoh90.cloudcontrolled.com%2Fwiki.html"><img
+				src="wcag1AAA.gif" alt="WAVE-Tool" /></a>
+				</div>
+				</div>
+			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+			<script
+				src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+			<!-- Include all compiled plugins (below), or include individual files as needed -->
+			<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
