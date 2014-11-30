@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hausübung IBS</title>
+<title>Suche in Wikipedia</title>
 
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,29 +19,18 @@
 <body>
 	<div class="container">
 		<div class="jumbotron">
-			<h1>Erste IBS Hausübung</h1>
-			<h2>Herzlich willkommen!</h2>
-			<p>Hier finden Sie meine Inhalte zum Leistungsnachweis der ersten
-				IBS Hausübung.</p>
-			<div class="row">
-				<div class="col-md-4">
-					<a href="https://github.com/ibrasan/IBS/pull/2"><h4>Mein Pull Request</h4></a>
-				</div>
-				<div class="col-md-4">
-					<a href="https://github.com/jloh65/josualoh/pull/1"><h4>Pull Request meines Partners</h4></a>
-				</div>
-				<div class="col-md-4">
-					<a href="http://www.codecademy.com/jloh65"><h4>Codecademy Profil</h4></a>
-				</div>
-				<div class="col-md-4">
-					<a href="wiki.html"><h4>Wikipedia Suchformular</h4></a>
-				</div>
-				<div class="col-md-4">
-					<a href="impressum.html"><h4>Impressum</h4></a>
-				</div>
-			</div>
+			<h1>Wikipedia Suchformular</h1>
+			<p>Bitte geben sie hier ihren Suchbegriff ein:</p>
+			<form action="http://de.wikipedia.org/wiki/Spezial:Suche">
+				<fieldset>
+					<input type="text" name="search" value="" /> <input type="submit"
+						name="go" value="Artikel" /> <input type="submit" name="fulltext"
+						value="Volltext" />
+				</fieldset>
+			</form>
 		</div>
 	</div>
+	<a href="http://wave.webaim.org/report#/josualoh90.cloudcontrolled.com%2Fwiki.html"><img src="wcag1AAA.gif"/></a>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
