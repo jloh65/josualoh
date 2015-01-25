@@ -5,7 +5,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hausübung IBS</title>
-
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -17,29 +16,13 @@
     <![endif]-->
 </head>
 <body>
-	<div class="container">
-		<div class="jumbotron">
-			<h1>Erste IBS Hausübung</h1>
-			<h2>Herzlich willkommen!</h2>
-			<p>Hier finden Sie meine Inhalte zum Leistungsnachweis der ersten
-				IBS Hausübung.</p>
-			<div class="row">
-				<div class="col-md-4">
-					<a href="https://github.com/ibrasan/IBS/pull/2"><h4>Mein Pull Request</h4></a>
-				</div>
-				<div class="col-md-4">
-					<a href="https://github.com/jloh65/josualoh/pull/1"><h4>Pull Request meines Partners</h4></a>
-				</div>
-				<div class="col-md-4">
-					<a href="http://www.codecademy.com/jloh65"><h4>Codecademy Profil</h4></a>
-				</div>
-				<div class="col-md-4">
-					<a href="wiki.html"><h4>Wikipedia Suchformular</h4></a>
-				</div>
-				<div class="col-md-4">
-					<a href="impressum.html"><h4>Impressum</h4></a>
-				</div>
-			</div>
+    <div class="container">
+        <div class="jumbotron" style="background: gold">
+            <h1 style="cursor: default">Herzlich Willkommen! :-)</h1>
+            <div style="height: 10px"></div>
+			<h2 id="eins" style="cursor: pointer; text-decoration: underline">"Website in der Cloud"</h2>
+            <div style="height: 10px"></div>
+			<h2 id="zwei" style="cursor: pointer; text-decoration: underline">"WebApp in der Cloud"</h2>
 		</div>
 	</div>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -47,5 +30,48 @@
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">
+        
+    $(document).ready(function() {
+        var haeins = '<p id="ersteHA" style="cursor: default">Hier finden Sie meine Inhalte zum Leistungsnachweis der ersten IBS Hausübung.</p>';
+        var hazwei = '<div class="row" id="ersteHA"><div class="col-md-4"><a href="https://github.com/ibrasan/IBS/pull/2"><h4>Mein Pull                           Request</h4></a></div><div class="col-md-4"><a href="https://github.com/jloh65/josualoh/pull/1"><h4>Pull Request                             meines Partners</h4></a></div><div class="col-md-4"><a href="http://www.codecademy.com/jloh65"><h4>Codecademy                               Profil</h4></a></div><div class="col-md-4"><a href="wiki.html"><h4>Wikipedia Suchformular</h4></a></div><div                                 class="col-md-4"><a href="impressum.html"><h4>Impressum</h4></a></div></div>';
+        var hadrei = '<p id="zweiteHA" style="cursor: default">Hier finden Sie meine Inhalte zum Leistungsnachweis der zweiten IBS Hausübung.</p>';
+        var havier = '<div class="row" id="zweiteHA"><div class="col-md-4"><a href="http://www.codecademy.com/jloh65"><h4>Codecademy                               Profil</h4></a></div><div class="col-md-4"><a href="Sencha/index.html"><h4>Sencha Touch</h4></a></div></div>';
+        var checkeins = true;
+        var checkzwei = true;
+        
+        $('#eins').mousedown(
+            function() {
+                if (checkeins) {
+                    $('#ersteHA').remove();
+                    $('#ersteHA').remove();
+                    $('#eins').after($(hazwei));
+                    $('#eins').after($(haeins));
+                    checkeins = false;
+                } else {
+                    $('#ersteHA').remove();
+                    $('#ersteHA').remove();
+                    checkeins = true;
+                }
+            });
+        
+        $('#zwei').mousedown(
+            function() {
+                if (checkzwei) {
+                    $('#zweiteHA').remove();
+                    $('#zweiteHA').remove();
+                    $('#zwei').after(havier);
+                    $('#zwei').after(hadrei);
+                    checkzwei = false;
+                } else {
+                    $('#zweiteHA').remove();
+                    $('#zweiteHA').remove();
+                    checkzwei = true;
+                }
+        });
+    });
+    
+    </script>
 </body>
 </html>
